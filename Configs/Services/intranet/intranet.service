@@ -1,0 +1,11 @@
+[Unit]
+Description=Intranet for MegaMaxCorpInc
+
+[Service]
+Type=forking
+PIDFile=/srv/hackerman/intranet/intranet.PIDFile
+ExecStartPre=-/srv/hackerman/intranet/installIntranet
+ExecStart=node /srv/intranet/app.js
+
+[Install]
+WantedBy=multi-user.target
