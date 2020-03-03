@@ -12,8 +12,6 @@ sudo systemctl enable ssh.service
 sudo ufw allow 22/tcp
 ## Display greeting message when server boots to console
 echo MegaMaxCorpInc server booted. Please login to our intranet website at address \\4 | sudo tee /etc/issue
-## Deny SSH connections to localhost. This way the SSH keys must *somehow* be downloaded to the local pc.
-echo sshd : localhost : deny | sudo tee -a /etc/hosts.deny
 ## Do not allow non wheel user accounts to login and enter the console so SSH must be used.
 echo -:ALL EXCEPT (wheel) shutdown sync:LOCAL | sudo tee -a /etc/security/access.conf
 ## Clone the latest version of the the MegaMaxCorpInc intranet to /srv/intranet
@@ -49,3 +47,7 @@ sudo adduser challenge09 --disabled-login --gecos ""
 echo challenge09:challenge09 | sudo chpasswd
 sudo adduser challenge10 --disabled-login --gecos "" 
 echo challenge10:challenge10 | sudo chpasswd
+
+# Last server configurations and reboot
+## Deny SSH connections to localhost. This way the SSH keys must *somehow* be downloaded to the local pc.
+echo sshd : localhost : deny | sudo tee -a /etc/hosts.deny
