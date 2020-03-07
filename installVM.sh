@@ -5,7 +5,7 @@ sudo apt dist-upgrade
 ## Add Node.js LTS repositories
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ## Install needed software for challenges with package manager APT
-sudo apt install -y openssh-server nodejs git
+sudo apt install -y openssh-server nodejs git vsftpd
 ## Enable SSH
 sudo systemctl enable ssh.service
 ## Allow SSH port to be exposed in order to be able to connect with it
@@ -24,6 +24,8 @@ sudo chmod 777 /srv/hackerman/socket
 
 # install challenges (WIP as all challenges will eventually move to their own subfolder)
 bash challenge00/install.sh
+bash challenge01/install.sh
+bash challenge02/install.sh
 
 sudo adduser challenge02 --disabled-login --gecos "" 
 echo challenge02:challenge02 | sudo chpasswd
