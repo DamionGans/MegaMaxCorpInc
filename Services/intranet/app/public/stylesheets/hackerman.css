@@ -1,0 +1,59 @@
+main {
+    border-radius: 160px;
+    border: 3px solid rgb(117, 124, 118);
+    background-color: #B9E6C1;
+    position: absolute;
+    bottom: 3%;
+    top: 3%;
+    left: 3%;
+    right: 3%;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+#shells {
+    display: flex;
+    min-height: 55vh;
+}
+.shell {
+    padding: 2%;
+    background-color:black;
+    color: greenyellow;
+    border: 3px solid greenyellow ;
+    margin: 5%;
+    flex: 40%;
+}
+#hackermanShell {
+    float:left;
+}
+#noobShell {
+    float:right;
+}
+
+.chatBubble{
+    position: absolute;  
+    bottom: 2vh;
+    width:80%;
+    min-height: 20vh;
+    margin: auto 10%;
+    border-radius: 160px;
+    border: 3px solid #CD05FF;
+    padding:0px;
+}
+
+#hackermanChatBubble {
+    background-color: #5ADFF5;
+    }
+    
+.chatBubblePortrait {
+    width: auto;
+    height: 20vh;
+    margin:0%;
+    border-radius: 160px;
+    border: 3px solid #CD05FF;
+    float:left;
+}
+.chatBubbleText {
+    float:right;
+    margin-right:10vh;
+    margin-top: 10vh;
+    font-size: 2.0vh;
+}

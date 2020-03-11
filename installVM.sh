@@ -14,13 +14,17 @@ sudo ufw allow 22/tcpA
 echo MegaMaxCorpInc server booted. Please login to our intranet website at address \\4 | sudo tee /etc/issue
 ## Do not allow non wheel user accounts to login and enter the console so SSH must be used.
 echo -:ALL EXCEPT (wheel) shutdown sync:LOCAL | sudo tee -a /etc/security/access.conf
-## Clone the latest version of the the MegaMaxCorpInc intranet to /srv/intranet
+## Install the intranet service
 cd /srv/
 sudo git clone https://github.com/DamionGans/MegaMaxCorpinc-Intranet.git intranet
+
 ## Create /srv/hackerman with a socket so all of hackerman's applicatons can communicate with each other.
 sudo mkdir /srv/hackerman/
 sudo touch /srv/hackerman/socket
 sudo chmod 777 /srv/hackerman/socket
+
+## Install socketreader service
+
 
 # install challenges (WIP as all challenges will eventually move to their own subfolder)
 bash challenge00/install.sh

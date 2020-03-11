@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        body {
+            font-family: "Comic Sans MS", sans-serif;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        input[type=text], input[type=password] {
+            
+        }
+
+        button {
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <center><img src="images/logo.jpg" style="position: relative; width:10;"></center>
+    <center><b><i style="color:red; font-family:Arial, Helvetica, sans-serif; font-style:oblique">We achieve the impossible!</i></b></center>
+    <h2>Welcome to our intranet</h2>
+
+    <form action="intranet.html" method="GET">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Login</button>
+        </div>
+    </form>
+
+</body>
+</html>
