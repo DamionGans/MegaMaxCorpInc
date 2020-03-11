@@ -5,15 +5,13 @@ sudo apt -y dist-upgrade
 ## Add Node.js 12.x repositories
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ## Install needed software for challenges with package manager APT
-sudo apt install -y openssh-server nodejs git vsftpd
-## Enable SSH
-sudo systemctl enable ssh.service
-## Allow SSH port to be exposed in order to be able to connect with it
-sudo ufw allow 22/tcpA
+sudo apt install -y nodejs git vsftpd
 ## Display greeting message when server boots to console
 echo MegaMaxCorpInc server booted. Please login to our intranet website at address \\4 | sudo tee /etc/issue
 ## Do not allow non wheel user accounts to login and enter the console so SSH must be used.
 echo "-:ALL EXCEPT (wheel) shutdown sync:LOCAL" | sudo tee -a /etc/security/access.conf
+
+cd ./
 ## Install the intranet service
 bash services/intranet/install.sh
 ## Install the socketreader service

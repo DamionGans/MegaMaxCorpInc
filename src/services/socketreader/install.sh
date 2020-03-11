@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ./
 sudo mkdir /srv/hackerman/
 sudo touch /srv/hackerman/socket
 sudo chmod 777 /srv/hackerman/socket
