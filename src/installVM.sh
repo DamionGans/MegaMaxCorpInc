@@ -18,8 +18,6 @@ echo -:ALL EXCEPT (wheel) shutdown sync:LOCAL | sudo tee -a /etc/security/access
 bash services/intranet/install.sh
 ## Install the socketreader service
 bash services/socketreader/install.sh
-## Create /srv/hackerman with a socket so all of hackerman's applicatons can communicate with each other.
-
 # install challenges (WIP as all challenges will eventually move to their own subfolder)
 bash challenge00/install.sh
 bash challenge01/install.sh

@@ -1,0 +1,6 @@
+1. Log in with SSH
+2. Find a hidden binary inside the system to unveil a passphrase...
+3. Execute it.
+4. Give the passphrase to hackerman
+5. ...
+6. Profit!

@@ -1,6 +1,6 @@
 #!/bin/bash
 command=$1
-if [[command == ""]]
+if [[ command == "SSHKeyPassphrase" ]]
 then
-    #code
+    echo "01.SSHKeyPassphrase" > /srv/hackerman/status
 fi

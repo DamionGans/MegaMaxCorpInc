@@ -12,7 +12,7 @@ sudo cp handler.sh /srv/hackerman/challenge01/handler.sh
 sudo chown hackerman:root /srv/hackerman/challenge01/handler.sh
 sudo chmod 770 /srv/hackerman/challenge01/handler.sh
 ## Copy the .challenge01sshkeypassprahse file to /bin/ of challenge01 and make user root and group challenge01 the owner of it.  
-sudo cp ./.challenge01sshkeypassprahse /bin/.
-sudo chown root:challenge01 /bin/.challenge01sshkeypassprahse
+sudo cp ./challenge01sshkeypassprahse /bin/.
+sudo chown root:challenge01 /bin/.challenge02sshkeypassprahse
 ## Make /bin/.challenge01sshkeypassprahse executable
-sudo chmod +x /bin/.challenge01sshkeypassprahse
+sudo chmod +x /bin/.challenge02sshkeypassprahse
