@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ./
+cd "$(dirname $0)"
 sudo mkdir /srv/hackerman/
 sudo touch /srv/hackerman/socket
 sudo chmod 777 /srv/hackerman/socket

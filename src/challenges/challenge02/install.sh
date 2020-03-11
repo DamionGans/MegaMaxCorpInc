@@ -1,4 +1,5 @@
 #!/bin/bash
+cd "$(dirname $0)"
 # challenge02 installation script
 ## Add the user challenge02 to system and give it a password
 sudo adduser challenge02 --disabled-login --gecos "" 
