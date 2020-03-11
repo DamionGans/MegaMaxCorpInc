@@ -7,7 +7,11 @@ echo challenge02:challenge02 | sudo chpasswd
 sudo cp ./todo.txt /home/challenge02/.todo.txt
 sudo chown challenge00:challenge00 /home/challenge00/.todo.txt
 sudo chmod 775 /home/challenge02/.todo.txt
-
+## Copy the socketreader handler to /srv/hackerman/challenge02/
+sudo cp handler.sh /srv/hackerman/challenge02/handler.sh
+sudo chown hackerman:root /srv/hackerman/challenge02/handler.sh
+sudo chmod 770 /srv/hackerman/challenge02/handler.sh
+## Create the Secret webserver config and startup files
 sudo mkdir /srv/.S€CRE]/
 sudo cp -R ./app/ /srv/.S€CRE]/
 sudo cp ./config /srv/.S€CRE]/

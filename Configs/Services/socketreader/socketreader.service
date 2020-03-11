@@ -1,0 +1,9 @@
+[Unit]
+Description=Socketreader for hackerman
+
+[Service]
+Type=forking
+ExecStart=/srv/hackerman/socketreader
+
+[Install]
+WantedBy=multi-user.target

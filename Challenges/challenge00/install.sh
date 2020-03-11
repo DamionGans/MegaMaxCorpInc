@@ -7,6 +7,10 @@ echo challenge00:challenge00 | sudo chpasswd
 sudo cp ./todo.txt /home/challenge00/todo.txt
 sudo chown challenge00:challenge00 /home/challenge00/todo.txt
 sudo chmod 775 /home/challenge00/todo.txt
+## Copy the socketreader handler to /srv/hackerman/challengexx/
+sudo cp handler.sh /srv/hackerman/challengexx/handler.sh
+sudo chown hackerman:root /srv/hackerman/challengexx/handler.sh
+sudo chmod 770 /srv/hackerman/challengexx/handler.sh
 ## supersecret
 sudo cp ./supersecret /home/challenge00/.supersecret
 sudo chown challenge00:challenge00 /home/challenge00/.supersecret
