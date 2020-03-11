@@ -1,6 +1,21 @@
 
-# Created by https://www.gitignore.io/api/node,visualstudio
-# Edit at https://www.gitignore.io/?templates=node,visualstudio
+# Created by https://www.gitignore.io/api/node,linux,packer,windows,vagrant,visualstudio
+# Edit at https://www.gitignore.io/?templates=node,linux,packer,windows,vagrant,visualstudio
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
 
 ### Node ###
 # Logs
@@ -107,6 +122,48 @@ dist/
 # Temporary folders
 tmp/
 temp/
+
+### Packer ###
+# Cache objects
+packer_cache/
+
+# For built boxes
+*.box
+
+### Vagrant ###
+# General
+.vagrant/*
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.log
+
+### Vagrant Patch ###
+
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
 
 ### VisualStudio ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -333,7 +390,6 @@ _pkginfo.txt
 # Others
 ClientBin/
 ~$*
-*~
 *.dbmdl
 *.dbproj.schemaview
 *.jfm
@@ -456,7 +512,4 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
-# End of https://www.gitignore.io/api/node,visualstudio
-
-.vscode/
-.deployment
+# End of https://www.gitignore.io/api/node,linux,packer,windows,vagrant,visualstudio
