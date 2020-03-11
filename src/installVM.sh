@@ -25,4 +25,4 @@ bash challenge02/install.sh
 
 # Last server configurations and reboot
 ## Deny SSH connections to localhost. This way the SSH keys must *somehow* be downloaded to the local pc.
-echo sshd : localhost : deny | sudo tee -a /etc/hosts.deny
+#echo sshd : localhost : deny | sudo tee -a /etc/hosts.deny
