@@ -9,7 +9,7 @@ sudo apt install -y openssh-server nodejs git vsftpd
 ## Enable SSH
 sudo systemctl enable ssh.service
 ## Allow SSH port to be exposed in order to be able to connect with it
-sudo ufw allow 22/tcp
+sudo ufw allow 22/tcpA
 ## Display greeting message when server boots to console
 echo MegaMaxCorpInc server booted. Please login to our intranet website at address \\4 | sudo tee /etc/issue
 ## Do not allow non wheel user accounts to login and enter the console so SSH must be used.

@@ -1,0 +1,4 @@
+#!/bin/bash
+tail -f /srv/hackerman/socket | while read line ; do
+    bash handler.sh $line
+done
