@@ -513,3 +513,5 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/node,linux,packer,windows,vagrant,visualstudio
+
+vagrant/
