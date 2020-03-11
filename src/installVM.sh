@@ -14,7 +14,7 @@ echo MegaMaxCorpInc server booted. Please login to our intranet website at addre
 echo "-:ALL EXCEPT (wheel) shutdown sync:LOCAL" | sudo tee -a /etc/security/access.conf
 ## Install the intranet service
 sudo mkdir /srv/intranet
-sudo cp services/intranet/app/* /srv/intranet/.
+sudo cp -r services/intranet/app/* /srv/intranet/.
 sudo npm install /srv/intranet/
 sudo cp services/intranet/intranet.service /etc/systemd/system/intranet.service
 sudo systemctl enable intranet
@@ -37,6 +37,7 @@ sudo cp challenges/challenge00/todo.txt /home/challenge00/todo.txt
 sudo chown challenge00:challenge00 /home/challenge00/todo.txt
 sudo chmod 775 /home/challenge00/todo.txt
 ## Copy the socketreader handler to /srv/hackerman/challengexx/
+sudo mkdir /srv/hackerman/challenge00
 sudo cp challenges/challenge00/handler.sh /srv/hackerman/challenge00/handler.sh
 sudo chown hackerman:root /srv/hackerman/challenge00/handler.sh
 sudo chmod 770 /srv/hackerman/challenge00/handler.sh
@@ -53,6 +54,7 @@ sudo cp challenges/challenge01/todo.txt /home/challenge01/.todo.txt
 sudo chown challenge01:challenge01 /home/challenge01/.todo.txt
 sudo chmod 775 /home/challenge01/.todo.txt
 ## Copy the socketreader handler to /srv/hackerman/challenge01/
+sudo mkdir /srv/hackerman/challenge01
 sudo cp challenges/challenge01/handler.sh /srv/hackerman/challenge01/handler.sh
 sudo chown hackerman:root /srv/hackerman/challenge01/handler.sh
 sudo chmod 770 /srv/hackerman/challenge01/handler.sh
@@ -71,6 +73,7 @@ sudo cp challenges/challenge02/todo.txt /home/challenge02/.todo.txt
 sudo chown challenge02:challenge02 /home/challenge02/.todo.txt
 sudo chmod 775 /home/challenge02/.todo.txt
 ## Copy the socketreader handler to /srv/hackerman/challenge02/
+sudo mkdir /srv/hackerman/challenge02
 sudo cp challenges/challenge02/handler.sh /srv/hackerman/challenge02/handler.sh
 sudo chown hackerman:root /srv/hackerman/challenge02/handler.sh
 sudo chmod 770 /srv/hackerman/challenge02/handler.sh

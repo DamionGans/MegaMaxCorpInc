@@ -3,7 +3,7 @@ Description=Intranet for MegaMaxCorpInc
 
 [Service]
 Type=forking
-ExecStart=node /srv/intranet/app.js
+ExecStart=/usr/bin/node /srv/intranet/app.js
 
 [Install]
 WantedBy=multi-user.target
