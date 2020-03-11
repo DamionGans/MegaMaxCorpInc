@@ -1,4 +1,8 @@
 #!/bin/bash
-tail -f /srv/hackerman/socket | while read line ; do
-    bash handler.sh $line
+tail -f -n 0 /srv/hackerman/socket | while read line ; do
+    challenge="$(echo $line | cut -d. -f1)"
+    challengecmd="$(echo $line | cut -d. -f2)"
+    bash /srv/hackerman/challenge$challenge/handler.sh $challengecmd
+    echo "Challenge = $challenge"
+    echo "Challenge command = $challengecmd"
 done
