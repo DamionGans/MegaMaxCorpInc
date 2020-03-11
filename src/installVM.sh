@@ -1,7 +1,7 @@
 # Install and configure server as is needed for the challenges
 ## Update packages
 sudo apt update
-sudo apt dist-upgrade
+sudo apt -y dist-upgrade
 ## Add Node.js 12.x repositories
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ## Install needed software for challenges with package manager APT
@@ -13,7 +13,7 @@ sudo ufw allow 22/tcpA
 ## Display greeting message when server boots to console
 echo MegaMaxCorpInc server booted. Please login to our intranet website at address \\4 | sudo tee /etc/issue
 ## Do not allow non wheel user accounts to login and enter the console so SSH must be used.
-echo -:ALL EXCEPT (wheel) shutdown sync:LOCAL | sudo tee -a /etc/security/access.conf
+echo "-:ALL EXCEPT (wheel) shutdown sync:LOCAL" | sudo tee -a /etc/security/access.conf
 ## Install the intranet service
 bash services/intranet/install.sh
 ## Install the socketreader service
