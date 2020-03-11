@@ -1,2 +1,0 @@
-# MegaMaxCorpinc-Intranet
-test
