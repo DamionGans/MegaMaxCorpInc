@@ -16,16 +16,14 @@ echo "-:ALL EXCEPT (wheel) shutdown sync:LOCAL" |  tee -a /etc/security/access.c
  mkdir /srv/intranet
  cp -r services/intranet/app/* /srv/intranet/.
  npm install /srv/intranet/
- cp services/intranet/intranet.service /etc/systemd/system/intranet.service
  ufw allow 80/tcp
- systemctl enable intranet
+ echo "@reboot /usr/bin/node /srv/intranet/app.js" | sudo tee -a /etc/crontab
 ## Install the socketreader service
  mkdir /srv/hackerman/
  touch /srv/hackerman/socket
  chmod 777 /srv/hackerman/socket
  cp services/socketreader/socketreader /srv/hackerman/socketreader
- cp services/socketreader/socketreader.service /etc/systemd/system/socketreader.service
- systemctl enable socketreader
+ echo "@reboot /bin/bash /srv/hackerman/socketreader" | sudo tee -a /etc/crontab
 # install challenges (WIP as all challenges will eventually move to their own subfolder)
 # challenge00 installation script
 ## Add the user challenge00 to system and give it a password
@@ -77,16 +75,16 @@ echo challenge02:challenge02 |  chpasswd
  chown hackerman:root /srv/hackerman/challenge02/handler.sh
  chmod 770 /srv/hackerman/challenge02/handler.sh
 ## Create the Secret webserver config and startup files
- mkdir /srv/.S€CRE]/
- cp -R challenges/challenge02/app/ /srv/.S€CRE]/
- cp challenges/challenge02/config /srv/.S€CRE]/
- cp challenges/challenge02/startServer.sh /srv/.S€CRE]/
- chmod 770 /srv/.S€CRE]/startServer.sh
- chown challenge02:hackerman /srv/.S€CRE]/startServer.sh
- mkdir /srv/hackerman/challenge02/
- cp challenges/challenge02/startServer-hackerman.sh /srv/hackerman/challenge02/
- chmod 770 /srv/hackerman/challenge02/startServer-hackerman.sh
- chown hackerman:root /srv/hackerman/challenge02/startServer-hackerman.sh
+mkdir /srv/.S€CRE]/
+cp -R challenges/challenge02/app/ /srv/.S€CRE]/.
+cp challenges/challenge02/config /srv/.S€CRE]/.
+cp challenges/challenge02/startServer.sh /srv/.S€CRE]/.
+chmod 770 /srv/.S€CRE]/startServer.sh
+chown challenge02:hackerman /srv/.S€CRE]/startServer.sh
+mkdir /srv/hackerman/challenge02/
+cp challenges/challenge02/startServer-hackerman.sh /srv/hackerman/challenge02/
+chmod 770 /srv/hackerman/challenge02/startServer-hackerman.sh
+chown hackerman:root /srv/hackerman/challenge02/startServer-hackerman.sh
 
 # Last server configurations and reboot
 ## Deny SSH connections to localhost. This way the SSH keys must *somehow* be downloaded to the local pc.
