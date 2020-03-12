@@ -25,7 +25,7 @@ sudo touch /srv/hackerman/socket
 sudo chmod 777 /srv/hackerman/socket
 sudo cp services/socketreader/socketreader /srv/hackerman/socketreader
 sudo cp services/socketreader/socketreader.service /etc/systemd/system/socketreader.service
-#sudo systemctl enable socketreader
+sudo systemctl enable socketreader
 # install challenges (WIP as all challenges will eventually move to their own subfolder)
 # challenge00 installation script
 ## Add the user challenge00 to system and give it a password
