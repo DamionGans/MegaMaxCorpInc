@@ -19,7 +19,6 @@ sudo npm install /srv/intranet/
 sudo cp services/intranet/intranet.service /etc/systemd/system/intranet.service
 sudo ufw allow 80/tcp
 sudo systemctl enable intranet
-sudo systemctl start intranet
 ## Install the socketreader service
 sudo mkdir /srv/hackerman/
 sudo touch /srv/hackerman/socket
@@ -27,7 +26,6 @@ sudo chmod 777 /srv/hackerman/socket
 sudo cp services/socketreader/socketreader /srv/hackerman/socketreader
 sudo cp services/socketreader/socketreader.service /etc/systemd/system/socketreader.service
 sudo systemctl enable socketreader
-sudo systemctl start socketreader
 # install challenges (WIP as all challenges will eventually move to their own subfolder)
 # challenge00 installation script
 ## Add the user challenge00 to system and give it a password
