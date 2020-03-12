@@ -17,6 +17,7 @@ sudo mkdir /srv/intranet
 sudo cp -r services/intranet/app/* /srv/intranet/.
 sudo npm install /srv/intranet/
 sudo cp services/intranet/intranet.service /etc/systemd/system/intranet.service
+sudo ufw allow 80/tcp
 sudo systemctl enable intranet
 sudo systemctl start intranet
 ## Install the socketreader service
