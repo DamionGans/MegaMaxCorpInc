@@ -78,9 +78,12 @@ chown hackerman:root /srv/hackerman/challenge02/handler.sh
 chmod 770 /srv/hackerman/challenge02/handler.sh
 ## Create the Secret webserver config and startup files
 mkdir /srv/.S€CRE]/
-cp -R challenges/challenge02/app/ /srv/.S€CRE]/.
 cp challenges/challenge02/config /srv/.S€CRE]/.
 cp challenges/challenge02/startServer.sh /srv/.S€CRE]/.
+mkdir /srv/.S€CRE]/data
+chmod 770 /srv/.S€CRE]/data
+cp challenges/challenge02/index.html /srv/.S€CRE]/data/.
+cp challenges/challenge02/passphrase /srv/.S€CRE]/data/.
 chmod 770 /srv/.S€CRE]/startServer.sh
 chown challenge02:hackerman /srv/.S€CRE]/startServer.sh
 cp challenges/challenge02/startServer-hackerman.sh /srv/hackerman/challenge02/
