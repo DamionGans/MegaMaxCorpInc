@@ -5,7 +5,7 @@ cd "$(dirname $0)"
  apt update
  apt -y dist-upgrade
 ## Add Node.js 12.x repositories
-curl -sL https://deb.nodesource.com/setup_12.x |  -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
 ## Install needed software for challenges with package manager APT
  apt install -y nodejs git vsftpd
 ## Display greeting message when server boots to console
@@ -56,7 +56,7 @@ echo challenge01:challenge01 |  chpasswd
  chown hackerman:root /srv/hackerman/challenge01/handler.sh
  chmod 770 /srv/hackerman/challenge01/handler.sh
 ## Copy the .challenge01sshkeypassprahse file to /bin/ of challenge01 and make user root and group challenge01 the owner of it.  
- cp challenges/challenge01/challenge02sshkeypassprahse /bin/.
+ cp challenges/challenge01/challenge02sshkeypassprahse /bin/.challenge02sshkeypassprahse
  chown root:challenge01 /bin/.challenge02sshkeypassprahse
 ## Make /bin/.challenge01sshkeypassprahse executable
  chmod +x /bin/.challenge02sshkeypassprahse
@@ -81,7 +81,6 @@ cp challenges/challenge02/config /srv/.S€CRE]/.
 cp challenges/challenge02/startServer.sh /srv/.S€CRE]/.
 chmod 770 /srv/.S€CRE]/startServer.sh
 chown challenge02:hackerman /srv/.S€CRE]/startServer.sh
-mkdir /srv/hackerman/challenge02/
 cp challenges/challenge02/startServer-hackerman.sh /srv/hackerman/challenge02/
 chmod 770 /srv/hackerman/challenge02/startServer-hackerman.sh
 chown hackerman:root /srv/hackerman/challenge02/startServer-hackerman.sh
