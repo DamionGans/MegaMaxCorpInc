@@ -2,7 +2,7 @@
 Description=Socketreader for hackerman
 
 [Service]
-Type=forking
+Type=simple
 ExecStart=/bin/bash /srv/hackerman/socketreader
 
 [Install]
