@@ -17,13 +17,15 @@ mkdir /srv/intranet
 cp -r services/intranet/app/* /srv/intranet/.
 npm install /srv/intranet/
 ufw allow 80/tcp
-echo "@reboot node /srv/intranet/app.js" | sudo tee -a /etc/crontab
+cp services/intranet/intranet.service /etc/systemd/system/.
+systemctl enable intranet
 ## Install the socketreader service
 mkdir /srv/hackerman/
 touch /srv/hackerman/socket
 chmod 777 /srv/hackerman/socket
 cp services/socketreader/socketreader /srv/hackerman/socketreader
-echo "@reboot bash /srv/hackerman/socketreader" | sudo tee -a /etc/crontab
+cp services/socketreader/socketreader.service /etc/systemd/system/.
+systemctl enable socketreader
 # install challenges (WIP as all challenges will eventually move to their own subfolder)
 # challenge00 installation script
 ## Add the user challenge00 to system and give it a password
