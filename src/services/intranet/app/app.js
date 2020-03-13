@@ -25,12 +25,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.get('/hackermanStatus', async function (res) {
-    let status = await fs.readFile('/srv/hackerman/status', (err, data) => {
-        if (err) throw err;
+app.get('/hackermanStatus', async function (req, res) {
+    let status = fs.readFile('/srv/hackerman/status', (err, data) => {
+        if (err)
+            throw err;
         console.log(data);
-      });
-    res.send(status);
+    });
+    res.end(status);
 })
 app.use('/hackerman', hackermanRouter);
 app.post('/checkKey', function (req, res) {
