@@ -9,9 +9,11 @@ enabledCount=0
 commentCount=0
 wrongCount=0
 for i in "${arr[@]}"; do
-    if [ $i = "enabled" ]; then
+    if [[ "$i" = "enabled" ]]
+    then
         ((enabledCount++))
-    elif [[ $i = "#*" ]]; then
+    elif [[ "$i" = "#*" ]]
+    then
         ((commentCount++))
     else
         ((wrongCount++))
