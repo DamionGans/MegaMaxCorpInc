@@ -89,11 +89,15 @@ cp challenges/challenge02/startServer.sh /srv/.S€CRE]/.
 mkdir /srv/.S€CRE]/data
 cp challenges/challenge02/index.html /srv/.S€CRE]/data/.
 echo "anon_root=/srv/.S€CRE]/data/" >> /etc/vsftpd.conf
-echo "local_root=/" >> /etc/vsftpd.conf
+echo "local_root=/srv/.S€CRE]/data/.secret" >> /etc/vsftpd.conf
+echo "ftp_data_port=12345" >> /etc/vsftpd.conf
 sed -i  s/anonymous_enable=NO/anonymous_enable=YES/g /etc/vsftpd.conf
 systemctl stop vsftpd
 systemctl disable vsftpd
-cp challenges/challenge02/passphrase /srv/.S€CRE]/data/.
+mkdir /srv/.S€CRE]/data/.secret/
+chown hackerman:root /srv/.S€CRE]/data/.secret/
+chmod 770 /srv/.S€CRE]/data/.secret/
+cp challenges/challenge02/passphrase /srv/.S€CRE]/data/.secret/passphrase
 chmod 770 /srv/.S€CRE]/startServer.sh
 chown challenge02:hackerman /srv/.S€CRE]/startServer.sh
 cp challenges/challenge02/startServer-hackerman.sh /srv/hackerman/challenge02/
