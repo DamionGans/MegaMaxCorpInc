@@ -5,7 +5,7 @@ while [[ "$(cat /srv/hackerman/status)" != "02.startServer"* ]];
 do 
     sleep 0.5; 
 done
-if [[ "$(cat /srv/hackerman/status)" == "02.startServerSuccess" ]]
+if [[ "$(cat /srv/hackerman/status)" == "02.startServerSucces" ]]
 then
     echo "Server succesfully started at port 12345. You can enter now..."
 else
