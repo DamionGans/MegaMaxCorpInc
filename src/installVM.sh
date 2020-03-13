@@ -95,7 +95,7 @@ sed -i  s/anonymous_enable=NO/anonymous_enable=YES/g /etc/vsftpd.conf
 systemctl stop vsftpd
 systemctl disable vsftpd
 mkdir /srv/.S€CRE]/data/.secret/
-chown hackerman:root /srv/.S€CRE]/data/.secret/
+chown nobody:nogroup /srv/.S€CRE]/data/.secret/
 chmod 770 /srv/.S€CRE]/data/.secret/
 cp challenges/challenge02/passphrase /srv/.S€CRE]/data/.secret/passphrase
 chmod 770 /srv/.S€CRE]/startServer.sh
