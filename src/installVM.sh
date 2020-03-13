@@ -25,7 +25,7 @@ touch /srv/hackerman/socket
 chmod 777 /srv/hackerman/socket
 touch /srv/hackerman/status
 chown hackerman:root /srv/hackerman/status
-chmod 770 /srv/hackerman/status
+chmod 774 /srv/hackerman/status
 cp services/socketreader/socketreader /srv/hackerman/socketreader
 cp services/socketreader/socketreader.service /etc/systemd/system/.
 systemctl enable socketreader
