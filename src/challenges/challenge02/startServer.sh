@@ -1,9 +1,13 @@
 #!/bin/bash
 echo "02.startServer" >> /srv/hackerman/socket
 sleep 1.5
-while [[ ! -f /srv/hackerman/.S€CRET/status ]]; 
+while [[ "$(cat /srv/hackerman/.S€CRET/status)" != "02.startServer*" ]]; 
 do 
     sleep 0.5; 
 done
-
-cat /srv/hackerman/.S€CRET/status
+if [[ "$(cat /srv/hackerman/.S€CRET/status)" == "02.startServerSuccess" ]]
+then
+    echo "Server succesfully started at port 12345. You can enter now..."
+else
+    echo "Server started unsuccesful."
+fi

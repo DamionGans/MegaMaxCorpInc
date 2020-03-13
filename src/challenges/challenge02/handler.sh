@@ -1,12 +1,16 @@
 #!/bin/bash
 command=$1
+if [[ "$command" == "startServer" ]]
+then
+    bash /srv/hackerman/challenge02/startServer-hackerman.sh
+fi
 if [[ "$command" == "startServerSucces" ]]
 then
     systemctl start vsftpd
-    echo "server succefully started" > /srv/hackerman/challenge02/status
+    echo "02.startServerSucces" > /srv/hackerman/challenge02/status
 fi
-if [[ "$command" == "02.startServerFail" ]]
+if [[ "$command" == "startServerFail" ]]
 then
-    systemctl start vsftpd
-    echo "server succefully failed starting" > /srv/hackerman/challenge02/status
+    systemctl stop vsftpd
+    echo "02.startServerFail > /srv/hackerman/challenge02/status
 fi

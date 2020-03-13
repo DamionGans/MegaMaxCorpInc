@@ -91,7 +91,8 @@ cp challenges/challenge02/index.html /srv/.S€CRE]/data/.
 echo "anon_root=/srv/.S€CRE]/data/" >> /etc/vsftpd.conf
 echo "local_root=/" >> /etc/vsftpd.conf
 sed -i  s/anonymous_enable=NO/anonymous_enable=YES/g /etc/vsftpd.conf
-service vsftpd stop
+systemctl stop vsftpd
+systemctl disable vsftpd
 cp challenges/challenge02/passphrase /srv/.S€CRE]/data/.
 chmod 770 /srv/.S€CRE]/startServer.sh
 chown challenge02:hackerman /srv/.S€CRE]/startServer.sh
