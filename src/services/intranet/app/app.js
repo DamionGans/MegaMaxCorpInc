@@ -26,12 +26,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.get('/hackermanStatus', async function (req, res) {
-    let status = fs.readFile('/srv/hackerman/status', (err, data) => {
+    let status = fs.readFile('/srv/hackerman/status', 'utf8', (err, data) => {
         if (err)
             throw err;
-        console.log(data);
+        res.end(data);
     });
-    res.end(status);
 })
 app.use('/hackerman', hackermanRouter);
 app.post('/checkKey', function (req, res) {
