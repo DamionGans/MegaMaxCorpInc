@@ -23,9 +23,13 @@ systemctl enable intranet
 mkdir /srv/hackerman/
 touch /srv/hackerman/socket
 chmod 777 /srv/hackerman/socket
+touch /srv/hackerman/status
+chown hackerman:root /srv/hackerman/status
+chmod 770 /srv/hackerman/status
 cp services/socketreader/socketreader /srv/hackerman/socketreader
 cp services/socketreader/socketreader.service /etc/systemd/system/.
 systemctl enable socketreader
+echo "00.installed" > /srv/hackerman/status
 # install challenges (WIP as all challenges will eventually move to their own subfolder)
 # challenge00 installation script
 ## Add the user challenge00 to system and give it a password
