@@ -9,12 +9,11 @@ var bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var hackermanRouter = require('./routes/hackerman');
 const fs = require('fs');
-let hackermanState;
 const hackermanStateGetter = async function(req, res, next) {
     fs.readFile('/srv/hackerman/status', 'utf8', (err, data) => {
         if (err)
             throw err;
-        hackermanState = data;
+        app.set('hackermanStatus', data);
     });
     next();
 }
