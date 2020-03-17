@@ -2,16 +2,15 @@
 cd "$(dirname $0)"
 # Install and configure server as is needed for the challenges
 ## Update packages
-apt update
-apt -y dist-upgrade
+apt-get update
+apt-get -y dist-upgrade
 ## Add Node.js 12.x repositories
 curl -sL https://deb.nodesource.com/setup_12.x | bash -
 ## Install needed software for challenges with package manager APT
-apt install -y nodejs git vsftpd
+apt-get install -y nodejs
+apt-get download -y vsftpd
 ## Display greeting message when server boots to console
 echo MegaMaxCorpInc server booted. Please login to our intranet website at address \\4 |  tee /etc/issue
-## Do not allow non wheel user accounts to login and enter the console so SSH must be used.
-echo "-:ALL EXCEPT (wheel) shutdown sync:LOCAL" |  tee -a /etc/security/access.conf
 ## Install the intranet service
 mkdir /srv/intranet
 cp -r services/intranet/app/* /srv/intranet/.
@@ -47,7 +46,7 @@ chmod 770 /srv/hackerman/challenge00/handler.sh
 ## supersecret
 cp challenges/challenge00/supersecret /home/challenge00/.supersecret
 chown challenge00:hackerman /home/challenge00/.supersecret
-chmod 775 /home/challenge00/.supersecret
+chmod 770 /home/challenge00/.supersecret
 # challenge01 installation script
 ## Add the user challenge01 to system and give it a password
 adduser challenge01 --disabled-login --gecos "" 
@@ -66,7 +65,6 @@ cp challenges/challenge01/challenge02sshkeypassprahse /bin/.challenge02sshkeypas
 chown challenge01:hackerman /bin/.challenge02sshkeypassprahse
 ## Make /bin/.challenge01sshkeypassprahse executable
 chmod +x /bin/.challenge02sshkeypassprahse
-
 # challenge02 installation script
 ## Add the user challenge02 to system and give it a password
 adduser challenge02 --disabled-login --gecos "" 
