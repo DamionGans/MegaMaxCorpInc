@@ -6,8 +6,4 @@ let hackermanState = req.get('hackermanState');
 router.get('/', function(req, res) {
     res.redirect('/login.html');
 });
-
-router.get('/getKeys', function (req, res) {
-    res.redirect('/getKeys.html');
-});
 module.exports = router;
