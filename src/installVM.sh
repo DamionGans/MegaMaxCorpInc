@@ -7,8 +7,8 @@ apt-get -y dist-upgrade
 ## Add Node.js 12.x repositories
 curl -sL https://deb.nodesource.com/setup_12.x | bash -
 ## Install needed software for challenges with package manager APT
+apt-get download -y nodejs vsftpd
 apt-get install -y nodejs
-apt-get download -y vsftpd
 ## Display greeting message when server boots to console
 echo MegaMaxCorpInc server booted. Please login to our intranet website at address \\4 |  tee /etc/issue
 ## Install the intranet service
