@@ -4,6 +4,17 @@ let hackermanState = req.get('hackermanState');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.redirect('/login.html');
+    switch (hackermanState)
+    {
+        case "00.installed":
+            {
+                res.redirect('/login.html');
+            }
+        default:
+            {
+                res.redirect('/hackerman');
+            }
+       
+    }
 });
 module.exports = router;
