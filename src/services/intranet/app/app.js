@@ -9,7 +9,15 @@ var bodyParser = require('body-parser');
 var indexRouter = require('./routes/index');
 var hackermanRouter = require('./routes/hackerman');
 const fs = require('fs');
-
+let hackermanState;
+const hackermanStateGetter = async function(req, res, next) {
+    fs.readFile('/srv/hackerman/status', 'utf8', (err, data) => {
+        if (err)
+            throw err;
+        hackermanState = data;
+    });
+    next();
+}
 var app = express();
 
 // view engine setup
@@ -23,15 +31,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(hackermanStateGetter);
 
 app.use('/', indexRouter);
-app.get('/hackermanStatus', async function (req, res) {
-    let status = fs.readFile('/srv/hackerman/status', 'utf8', (err, data) => {
-        if (err)
-            throw err;
-        res.end(data);
-    });
-})
 app.use('/hackerman', hackermanRouter);
 app.post('/checkKey', function (req, res) {
     let secret = req.body.secret.toUpperCase();
