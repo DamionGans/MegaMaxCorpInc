@@ -32,7 +32,7 @@ Installation targets can be:
 ### 2. After installing, login and clone this repo and install it
 ```sh
 git clone https://github.com/DamionGans/MegaMaxCorpInc.git
-cd MegaMaxCorpInc/src/
+cd MegaMaxCorpInc/
 sudo bash installVM.sh
 # enter your password and wait for the installation
 ```
