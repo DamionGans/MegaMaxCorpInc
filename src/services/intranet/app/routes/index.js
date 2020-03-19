@@ -3,10 +3,17 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.redirect('/login.html');
-});
-
-router.get('/getKeys', function (req, res) {
-    res.redirect('/getKeys.html');
+    switch (req.get('hackermanState'))
+    {
+        case "00.installed":
+            {
+                res.redirect('/login.html');
+            }
+        default:
+            {
+                res.redirect('/hackerman');
+            }
+       
+    }
 });
 module.exports = router;
