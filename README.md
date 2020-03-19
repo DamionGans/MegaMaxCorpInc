@@ -21,6 +21,7 @@ MegaMaxCorpInc is a big company that has badly secured IT-facilities. Mr. Hacker
 URL's to get Ubuntu Server 18.04.4:
 - HTTP: [link](http://releases.ubuntu.com/18.04/ubuntu-18.04.4-live-server-amd64.iso)
 - Torrent: [link](http://releases.ubuntu.com/18.04/ubuntu-18.04.4-live-server-amd64.iso.torrent)
+- WSL2: [link](https://www.microsoft.com/en-us/p/ubuntu-1804-lts/9n9tngvndl3q)
 
 Installation targets can be:
 - inside a VM (VirtualBox, VMWare, Hyper-V and the likes)
