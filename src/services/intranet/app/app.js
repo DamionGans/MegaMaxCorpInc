@@ -10,10 +10,10 @@ var indexRouter = require('./routes/index');
 var hackermanRouter = require('./routes/hackerman');
 const fs = require('fs');
 const hackermanStateGetter = async function(req, res, next) {
-    fs.readFile('/srv/hackerman/status', 'utf8', (err, data) => {
+    fs.readFile('/srv/hackerman/state', 'utf8', (err, data) => {
         if (err)
             throw err;
-        app.set('hackermanStatus', data);
+        app.set('hackermanstate', data);
     });
     next();
 }
