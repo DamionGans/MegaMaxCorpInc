@@ -3,7 +3,7 @@ Description=Intranet for MegaMaxCorpInc
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/node /srv/intranet/app.js
+ExecStart=DEBUG=intranet:* cd /srv/intranet && /usr/bin/npm start
 
 [Install]
 WantedBy=multi-user.target
