@@ -1,5 +1,6 @@
 #!/bin/bash
-cd "$(dirname $0)"
+scriptDir="$(dirname $0)"
+cd $scriptDir
 # Install and configure server as is needed for the challenges
 ## Update packages
 apt-get update
@@ -13,7 +14,9 @@ echo MegaMaxCorpInc server booted. Please login to our intranet website at addre
 ## Install the intranet service
 mkdir /srv/intranet
 cp -r services/intranet/app/* /srv/intranet/.
-npm install /srv/intranet/
+cd /srv/intranet
+npm install
+cd $scriptDir
 ufw allow 80/tcp
 cp services/intranet/intranet.service /etc/systemd/system/.
 systemctl enable intranet
