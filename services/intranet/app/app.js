@@ -1,14 +1,14 @@
 var express = require('express');
 var path = require('path');
 
-var hackermanMiddleWare = require('./hackermanMiddleWare');
+var hackermanWare = require('./hackermanWare');
 
 var indexRouter = require('./routes/index');
 var hackermanRouter = require('./routes/hackerman');
 
 
 var app = express();
-app.use(hackermanMiddleWare.getHackermanState)
+app.use(hackermanWare.getHackermanState)
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
