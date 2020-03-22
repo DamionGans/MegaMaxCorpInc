@@ -19,7 +19,8 @@ npm install
 cd $scriptDir
 ufw allow 80/tcp
 cp services/intranet/intranet.service /etc/systemd/system/.
-systemctl enable intranet
+## disable intranet service enable for now (as I'm developing the script)
+### systemctl enable intranet
 ## Install the socketreader service
 mkdir /srv/hackerman/
 touch /srv/hackerman/socket
