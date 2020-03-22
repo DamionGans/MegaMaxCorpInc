@@ -30,7 +30,6 @@ chmod 774 /srv/hackerman/state
 cp services/socketreader/socketreader /srv/hackerman/socketreader
 cp services/socketreader/socketreader.service /etc/systemd/system/.
 systemctl enable socketreader
-echo "00.installed" > /srv/hackerman/state
 # install challenges (WIP as all challenges will eventually move to their own subfolder)
 # challenge00 installation script
 ## Add the user challenge00 to system and give it a password
@@ -49,6 +48,8 @@ chmod 770 /srv/hackerman/challenge00/handler.sh
 cp challenges/challenge00/supersecret /home/challenge00/.supersecret
 chown challenge00:hackerman /home/challenge00/.supersecret
 chmod 770 /home/challenge00/.supersecret
+## Run installed script using the socketreader
+echo "00.installed" > /srv/hackerman/socket
 # challenge01 installation script
 ## Add the user challenge01 to system and give it a password
 adduser challenge01 --disabled-login --gecos ""
