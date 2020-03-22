@@ -1,5 +1,5 @@
 #!/bin/bash
-scriptDir="$(dirname $0)"
+scriptDir="$(pwd)"
 cd $scriptDir
 # Install and configure server as is needed for the challenges
 ## Update packages
