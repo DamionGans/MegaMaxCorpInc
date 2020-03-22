@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "" > /srv/hackerman/socket
 tail -f -n 0 /srv/hackerman/socket | while read line ; do
     challenge="$(echo $line | cut -d. -f1)"
     challengecmd="$(echo $line | cut -d. -f2)"
