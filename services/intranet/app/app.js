@@ -1,17 +1,14 @@
 var express = require('express');
 var path = require('path');
-var fs = require('fs');
-var hackermanStateGetter = function (req, res, next) {
-    app.set('hackermanState', fs.readFileSync('/srv/hackerman/state'));
-    next();
-}
+
+var hackermanMiddleWare = require('./hackermanMiddleWare');
 
 var indexRouter = require('./routes/index');
 var hackermanRouter = require('./routes/hackerman');
 
 
 var app = express();
-app.use(hackermanStateGetter)
+app.use(hackermanMiddleWare.getHackermanState)
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
