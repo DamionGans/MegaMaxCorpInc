@@ -45,6 +45,9 @@ mkdir /srv/hackerman/challenge00
 cp challenges/challenge00/handler.sh /srv/hackerman/challenge00/handler.sh
 chown hackerman:root /srv/hackerman/challenge00/handler.sh
 chmod 770 /srv/hackerman/challenge00/handler.sh
+## Copy the conversation and sayings to /srv/hackerman/challenge00/
+cp challenges/challenge00/conversation.txt /srv/hackerman/challenge00/.
+cp challenges/challenge00/sayings.txt /srv/hackerman/challenge00/.
 ## supersecret
 cp challenges/challenge00/supersecret /home/challenge00/.supersecret
 chown challenge00:hackerman /home/challenge00/.supersecret

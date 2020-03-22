@@ -1,25 +1,33 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <link href="stylesheets/hackerman.css" rel="stylesheet">
-    </head>
-    <body>
-        <main>
-            <section id="shells">
-                <article id="hackermanShell" class="shell">
-                    <p>hackermanShell</p>
-                </article>
-                <article id="noobShell" class="shell">
-                    <p>noobShell</p>
-                </article>
-            </section>
-            <section id="chatBubbles">
-                <article id="hackermanChatBubble" class="chatBubble">
-                    <img src="images/hackerman.gif" id="hackermanChatBubblePortrait" class="chatBubblePortrait">
-                    <p class="chatBubbleText">"Well, the demo may be finished now, but my work is far from over!"</p>
-                </article>
-            </section>
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="stylesheets/hackerman.css" rel="stylesheet">
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/hackerman.js"></script>
+</head>
+
+<body>
+    <main>
+        <section id="shells">
+            <article id="hackermanShell" class="shell" hidden="true">
+                <p id="hackermanShellText">> Hackerman Shell:<br></p>
+            </article>
+            <article id="noobShell" class="shell" hidden="true">
+                <p id="noobShellText">> Noob shell</p>
+                <form id="noobShellInput">
+                    <input type="search" name="entry">
+                </form>
+            </article>
+        </section>
+        <section id="chatBubbles">
+            <article id="hackermanChatBubble" class="chatBubble" hidden="true">
+                <img src="images/hackerman.gif" id="hackermanChatBubblePortrait" class="chatBubblePortrait">
+                <p class="chatBubbleText" id="hackermanChatBubbleText"><i>(press space..)</i></p>
+            </article>
+        </section>
+    </main>
+</body>
+
 </html>

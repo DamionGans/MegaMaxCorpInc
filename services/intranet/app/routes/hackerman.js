@@ -13,9 +13,14 @@ router.get('/', function (req, res, next) {
   }
   res.redirect('/hackerman.html');
 });
-router.get('/getConversation', function (req, res) {
+router.get('/conversation', function (req, res) {
   let hackermanState = req.app.get('hackermanState').toString();
   let challenge = hackermanState.substring(0, hackermanState.indexOf('.'));
-  res.end(hackermanWare.getConversation(challenge));
+  res.end(hackermanWare.conversation(challenge));
+});
+router.get('/sayings', function (req, res) {
+  let hackermanState = req.app.get('hackermanState').toString();
+  let challenge = hackermanState.substring(0, hackermanState.indexOf('.'));
+  res.end(hackermanWare.sayings(challenge));
 });
 module.exports = router;

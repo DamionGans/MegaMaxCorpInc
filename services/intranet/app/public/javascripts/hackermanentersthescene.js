@@ -15,7 +15,7 @@ function deletehtmlbody() {
 }
 
 function hackermanenter() {
-    var redirectWindow = window.open('hackerman.html', '_blank');
+    var redirectWindow = window.open('hackerman', '_blank');
     redirectWindow.location;
 }
 

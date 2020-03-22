@@ -12,6 +12,7 @@ main {
 #shells {
     display: flex;
     min-height: 55vh;
+    max-height:55vh;
 }
 .shell {
     padding: 2%;
@@ -20,6 +21,7 @@ main {
     border: 3px solid greenyellow ;
     margin: 5%;
     flex: 40%;
+    overflow-y: scroll;
 }
 #hackermanShell {
     float:left;
@@ -29,7 +31,7 @@ main {
 }
 
 .chatBubble{
-    position: absolute;  
+    position: absolute;
     bottom: 2vh;
     width:80%;
     min-height: 20vh;
@@ -42,7 +44,7 @@ main {
 #hackermanChatBubble {
     background-color: #5ADFF5;
     }
-    
+
 .chatBubblePortrait {
     width: auto;
     height: 20vh;
@@ -56,4 +58,7 @@ main {
     margin-right:10vh;
     margin-top: 10vh;
     font-size: 2.0vh;
+}
+#noobShellInput{
+    min-width:100%;
 }

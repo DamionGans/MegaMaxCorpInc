@@ -3,7 +3,8 @@ Description=Intranet for MegaMaxCorpInc
 
 [Service]
 Type=simple
-ExecStart=DEBUG=intranet:* cd /srv/intranet && /usr/bin/npm start
+Environment="PORT=80"
+ExecStart=cd /srv/intranet && /usr/bin/npm start
 
 [Install]
 WantedBy=multi-user.target
