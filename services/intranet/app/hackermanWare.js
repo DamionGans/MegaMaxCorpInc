@@ -6,9 +6,5 @@ const writeToHackermanSocket = (challenge, command) => {
 const conversation = (challenge) => {
     return fs.readFileSync(`/srv/hackerman/challenge${challenge}/conversation.txt`);
 }
-const sayings = (challenge) => {
-    return fs.readFileSync(`/srv/hackerman/challenge${challenge}/sayings.txt`);
-}
 exports.writeToHackermanSocket = writeToHackermanSocket;
 exports.conversation = conversation;
-exports.sayings = sayings;

@@ -18,9 +18,4 @@ router.get('/conversation', function (req, res) {
   let challenge = hackermanState.substring(0, hackermanState.indexOf('.'));
   res.end(hackermanWare.conversation(challenge));
 });
-router.get('/sayings', function (req, res) {
-  let hackermanState = req.app.get('hackermanState').toString();
-  let challenge = hackermanState.substring(0, hackermanState.indexOf('.'));
-  res.end(hackermanWare.sayings(challenge));
-});
 module.exports = router;
