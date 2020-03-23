@@ -4,7 +4,8 @@ Description=Intranet for MegaMaxCorpInc
 [Service]
 Type=simple
 Environment="PORT=80"
-ExecStart=cd /srv/intranet && /usr/bin/npm start
+WorkingDirectory=/srv/intranet/
+ExecStart=/usr/bin/npm start
 
 [Install]
 WantedBy=multi-user.target

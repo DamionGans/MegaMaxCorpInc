@@ -12,7 +12,7 @@ then
     systemctl start sshd
 
 fi
-if [[ "command" == "completed "]]
+if [[ "$command" == "completed" ]]
 then
     echo "00.completed" > /srv/hackerman/state
     echo "01.start" >> /srv/hackerman/socket

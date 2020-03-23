@@ -46,8 +46,7 @@ cp challenges/challenge00/handler.sh /srv/hackerman/challenge00/handler.sh
 chown hackerman:root /srv/hackerman/challenge00/handler.sh
 chmod 770 /srv/hackerman/challenge00/handler.sh
 ## Copy the conversation and sayings to /srv/hackerman/challenge00/
-cp challenges/challenge00/conversation.txt /srv/hackerman/challenge00/.
-cp challenges/challenge00/sayings.txt /srv/hackerman/challenge00/.
+cp challenges/challenge00/hacked.conversation /srv/hackerman/challenge00/.
 ## supersecret
 cp challenges/challenge00/supersecret /home/challenge00/.supersecret
 chown challenge00:hackerman /home/challenge00/.supersecret
@@ -67,6 +66,8 @@ mkdir /srv/hackerman/challenge01
 cp challenges/challenge01/handler.sh /srv/hackerman/challenge01/handler.sh
 chown hackerman:root /srv/hackerman/challenge01/handler.sh
 chmod 770 /srv/hackerman/challenge01/handler.sh
+## Copy the conversations
+cp challenges/challenge01/started.conversation /srv/hackerman/challenge01/.
 ## Copy the completeChallenge01 file to /bin/ of challenge01 and make user root and group challenge01 the owner of it.
 cp challenges/challenge01/completeChallenge01 /bin/.completeChallenge01
 chown challenge01:hackerman /bin/.completeChallenge01

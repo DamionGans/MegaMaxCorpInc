@@ -2,7 +2,7 @@
 command=$1
 if [[ "$command" == "start" ]]
 then
-
+    echo "01.started" > /srv/hackerman/state
 fi
 if [[ "$command" == "completeChallenge01" ]]
 then
