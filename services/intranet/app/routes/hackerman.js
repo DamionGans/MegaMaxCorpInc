@@ -34,7 +34,7 @@ router.get('/conversation', function (req, res) {
   res.end(hackermanWare.conversation(challenge, step));
 });
 router.post('/noobShellEntry', function (req, res) {
-  let challenge = checkChallengeCompletionString(req.entry);
+  let challenge = checkChallengeCompletionString(req.body.entry);
   if (challenge === null) {
     res.end('invalid');
   }

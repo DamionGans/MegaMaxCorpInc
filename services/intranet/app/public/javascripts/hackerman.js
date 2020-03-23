@@ -37,20 +37,24 @@ function updateConversationText() {
         }
     });
 }
+
 function noobShellEntry() {
     $("#noobShellInput").submit(function (e) {
         e.preventDefault();
-        $.post('hackerman/noobShellEntry', document.getElementById('noobshellInputEntry').value.toString(), function (data, status) {
-            document.getElementById('noobShellText').innerText += `\n${document.getElementById('noobshellInputEntry').value}`;
-            document.getElementById('noobshellInputEntry').value = "";
-            if (data === 'invalid') {
-                document.getElementById('noobShellText').innerText += `\nInvalid challenge completion string!`;
+
+        $.post('hackerman/noobShellEntry',
+            { entry: document.getElementById('noobshellInputEntry').value },
+            function (data, status) {
+                document.getElementById('noobShellText').innerText += `\n${document.getElementById('noobshellInputEntry').value}`;
+                document.getElementById('noobshellInputEntry').value = null;
+                if (data.toString() === 'invalid') {
+                    document.getElementById('noobShellText').innerText += `\n> ${data}`;
+                }
+                else {
+                    document.getElementById('noobShellText').innerText += `\n> Succefully completed challenge ${data}, loading next challenge...`;
+                }
             }
-            else {
-                document.getElementById('noobShellText').innerText += `\nChallenge ${data} completed. Loading new challenge...`;
-            }
-            document.getElementById('noobShell').scrollTop = document.getElementById('noobShell').scrollHeight;
-        });
+        )
     });
 }
 
@@ -63,6 +67,9 @@ function startHackermanServiceWorker() {
         if (e.which === 32 && document.activeElement !== document.getElementById('noobshellInputEntry')) {
             updateHackermanShell();
         }
+    });
+    $("#hackermanChatBubble").click(function () {
+        updateHackermanShell();
     });
 }
 
