@@ -1,3 +1,3 @@
 #!/bin/bash
-echo '01.SSHKeyPassphrase' > /srv/hackerman/socket
+echo '01.challengeCompletionString' > /srv/hackerman/socket
 echo 'I have never seen an entity such as badly secured as this server, I have to do something...'

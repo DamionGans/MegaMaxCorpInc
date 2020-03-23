@@ -9,10 +9,10 @@ enabledCount=0
 commentCount=0
 wrongCount=0
 for i in "${arr[@]}"; do
-    if [[ "$i" = "enabled" ]]
+    if [[ "$i" == "enabled" ]]
     then
         ((enabledCount++))
-    elif [[ "$i" = "#*" ]]
+    elif [[ "$i" == "#*" ]]
     then
         ((commentCount++))
     else
@@ -20,7 +20,7 @@ for i in "${arr[@]}"; do
     fi
 done
 
-if [[ $enabledCount -le 2 && $wrongCount -eq 0 && commentCount -le 2 ]] 
+if [[ $enabledCount -le 2 && $wrongCount -eq 0 && commentCount -le 2 ]]
 then
     echo "02.startServerSucces" >> /srv/hackerman/socket
     exit 0

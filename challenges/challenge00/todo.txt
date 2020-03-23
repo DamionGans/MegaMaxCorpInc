@@ -1,6 +1,6 @@
 1. Log in with SSH
 2. Download the supersecret file from home directory.
-3. Give it's content to hackerman
+3. Give it's content to hackerman inside the Noobshell
 4. Hackerman gives something back
 5. ....
 6. Profit!

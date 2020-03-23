@@ -67,11 +67,11 @@ mkdir /srv/hackerman/challenge01
 cp challenges/challenge01/handler.sh /srv/hackerman/challenge01/handler.sh
 chown hackerman:root /srv/hackerman/challenge01/handler.sh
 chmod 770 /srv/hackerman/challenge01/handler.sh
-## Copy the .challenge01sshkeypassprahse file to /bin/ of challenge01 and make user root and group challenge01 the owner of it.
-cp challenges/challenge01/challenge02sshkeypassprahse /bin/.challenge02sshkeypassprahse
-chown challenge01:hackerman /bin/.challenge02sshkeypassprahse
-## Make /bin/.challenge01sshkeypassprahse executable
-chmod +x /bin/.challenge02sshkeypassprahse
+## Copy the completeChallenge01 file to /bin/ of challenge01 and make user root and group challenge01 the owner of it.
+cp challenges/challenge01/completeChallenge01 /bin/.completeChallenge01
+chown challenge01:hackerman /bin/.completeChallenge01
+## Make /bin/.completeChallenge01 executable
+chmod +x /bin/.completeChallenge01
 # challenge02 installation script
 ## Add the user challenge02 to system and give it a password
 adduser challenge02 --disabled-login --gecos ""

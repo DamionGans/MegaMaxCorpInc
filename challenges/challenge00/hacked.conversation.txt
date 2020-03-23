@@ -26,5 +26,8 @@ Login to this server with SSH
 Simple, you say?
 WELL WHY SUCH A BADLY SECURED SERVER THEN?
 Allright good luck
+...
+...
+...
 I will help you
-bye
+Go do this: 12345

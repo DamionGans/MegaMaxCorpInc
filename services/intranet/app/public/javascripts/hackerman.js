@@ -37,13 +37,30 @@ function updateConversationText() {
         }
     });
 }
+function noobShellEntry() {
+    $("#noobShellInput").submit(function (e) {
+        e.preventDefault();
+        $.post('hackerman/noobShellEntry', document.getElementById('noobshellInputEntry').value.toString(), function (data, status) {
+            document.getElementById('noobShellText').innerText += `\n${document.getElementById('noobshellInputEntry').value}`;
+            document.getElementById('noobshellInputEntry').value = "";
+            if (data === 'invalid') {
+                document.getElementById('noobShellText').innerText += `\nInvalid challenge completion string!`;
+            }
+            else {
+                document.getElementById('noobShellText').innerText += `\nChallenge ${data} completed. Loading new challenge...`;
+            }
+            document.getElementById('noobShell').scrollTop = document.getElementById('noobShell').scrollHeight;
+        });
+    });
+}
 
 function startHackermanServiceWorker() {
     hackermanAppear();
     updateConversationText();
+    noobShellEntry();
     setInterval(updateConversationText, 5000);
     $(window).keypress(function (e) {
-        if (e.which === 32) {
+        if (e.which === 32 && document.activeElement !== document.getElementById('noobshellInputEntry')) {
             updateHackermanShell();
         }
     });
