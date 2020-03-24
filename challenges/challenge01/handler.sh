@@ -1,12 +1,14 @@
 #!/bin/bash
 command=$1
-if [[ "$command" == "start" ]]
+cd $(pwd)/$(dirname "$0")
+
+if [[ "$command" == "install"]]
 then
-    echo "01.started" > /srv/hackerman/state
+    bash install.sh
 fi
-if [[ "$command" == "completeChallenge01" ]]
+if [[ "$command" == "installed"]]
 then
-    echo "01.completeChallenge01" > /srv/hackerman/state
+    echo "01.installed" > /srv/hackerman/state
 fi
 if [[ "$command" == "completed" ]]
 then
