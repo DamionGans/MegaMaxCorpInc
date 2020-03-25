@@ -14,6 +14,4 @@ echo MegaMaxCorpInc server booted. Please login to our intranet website at addre
 mkdir /srv/hackerman/
 bash services/intranet/install.sh
 bash services/socketreader/install.sh
-bash challenges/challenge00/install.sh
-bash challenges/challenge01/install.sh
-bash challenges/challenge02/install.sh
+echo "00.install" > /srv/hackerman/socket
