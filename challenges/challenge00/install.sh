@@ -9,5 +9,4 @@ chmod 775 /home/challenge00/todo.txt
 cp supersecret /home/challenge00/.supersecret
 chown challenge00:hackerman /home/challenge00/.supersecret
 chmod 770 /home/challenge00/.supersecret
-echo "00.installed" > /srv/hackerman/socket
 cd $directoryFrom

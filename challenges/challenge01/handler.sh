@@ -2,11 +2,11 @@
 command=$1
 cd $(pwd)/$(dirname "$0")
 
-if [[ "$command" == "install"]]
+if [[ "$command" == "install" ]]
 then
     bash install.sh
 fi
-if [[ "$command" == "installed"]]
+if [[ "$command" == "installed" ]]
 then
     echo "01.installed" > /srv/hackerman/state
 fi

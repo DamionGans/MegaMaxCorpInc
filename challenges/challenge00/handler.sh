@@ -3,21 +3,22 @@ command=$1
 
 cd $(pwd)/$(dirname "$0")
 
-if [[ "$command" == "install"]]
+if [[ "$command" == "install" ]]
 then
-    bash /srv/hackerman/challenge00/install.sh
+    bash install.sh
+    echo "00.installed" >> /srv/hackerman/socket
 fi
 
 if [[ "$command" == "installed" ]]
 then
     echo "00.installed" > /srv/hackerman/state
-    systemctl stop sshd
+    #systemctl stop sshd
 fi
 
 if [[ "$command" == "hacked" ]]
 then
     echo "00.hacked" > /srv/hackerman/state
-    systemctl start sshd
+    #systemctl start sshd
 
 fi
 

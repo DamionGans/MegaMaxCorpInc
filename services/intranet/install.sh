@@ -8,4 +8,6 @@ npm install
 cd $directoryFrom/$(dirname "$0")
 ufw allow 80/tcp
 cp intranet.service /etc/systemd/system/.
+systemctl enable intranet
+systemctl start intranet
 cd $directoryFrom
