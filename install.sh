@@ -3,8 +3,8 @@ if [ "$EUID" -ne 0 ]
   then echo "Please run as root/sudo"
   exit
 fi
+originallDir=$(pwd)
 cd $(pwd)/$(dirname "$0")
-originalDir=$(pwd)
 
 apt-get update
 apt-get -y dist-upgrade
@@ -17,4 +17,4 @@ bash services/socketreader/install.sh
 cp -R challenges/challenge00/ /srv/hackerman/
 cp -R challenges/challenge01/ /srv/hackerman/
 cp -R challenges/challenge02/ /srv/hackerman/
-echo "00.install" > /srv/hackerman/socket
+echo "00.install" >> /srv/hackerman/socket
