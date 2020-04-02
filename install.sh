@@ -12,9 +12,14 @@ curl -sL https://deb.nodesource.com/setup_12.x | bash -
 apt-get install -y nodejs vsftpd openssh-server
 echo MegaMaxCorpInc server booted. Please login to our intranet website at address \\4 |  tee /etc/issue
 mkdir /srv/hackerman/
-bash services/intranet/install.sh
-bash services/socketreader/install.sh
+chown -R hackerman:root /srv/hackerman/
+chmod -R 770 /srv/hackerman/
 cp -R challenges/challenge00/ /srv/hackerman/
 cp -R challenges/challenge01/ /srv/hackerman/
 cp -R challenges/challenge02/ /srv/hackerman/
-echo "00.install" >> /srv/hackerman/socket
+bash services/intranet/install.sh
+systemctl enable intranet
+systemctl start intranet
+bash services/socketreader/install.sh
+systemctl enable socketreader
+systemctl start socketreader

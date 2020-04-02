@@ -5,7 +5,7 @@ adduser challenge02 --disabled-login --gecos ""
 echo challenge02:challenge02 |  chpasswd
 cp todo.txt /home/challenge02/.todo.txt
 chown challenge02:hackerman /home/challenge02/.todo.txt
-chmod 775 /home/challenge02/.todo.txt
+chmod 770 /home/challenge02/.todo.txt
 adduser challenge02ftp --disabled-login --gecos ""
 echo challenge02ftp:password |  chpasswd
 mkdir /srv/.S€CRE]/

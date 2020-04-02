@@ -8,7 +8,7 @@ fi
 enabledCount=0
 commentCount=0
 wrongCount=0
-for i in ${arr[@]}
+for i in "${arr[@]}"
 do
     if [[ "$i" == "enabled" ]]
     then
@@ -23,9 +23,11 @@ done
 
 if [[ $enabledCount -le 2 && $wrongCount -eq 0 && $commentCount -le 2 ]]
 then
+    systemctl start vsftpd
     echo "02.startServerSucces" >> /srv/hackerman/socket
     exit 0
 else
+    systemctl stop vsftpd
     echo "02.startServerFail" >> /srv/hackerman/socket
     exit 1
 fi

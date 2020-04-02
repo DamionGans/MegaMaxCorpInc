@@ -14,14 +14,7 @@ then
     echo "00.installed" > /srv/hackerman/state
 fi
 
-if [[ "$command" == "hacked" ]]
-then
-    echo "00.hacked" > /srv/hackerman/state
-
-fi
-
 if [[ "$command" == "completed" ]]
 then
-    echo "00.completed" > /srv/hackerman/state
     echo "01.install" >> /srv/hackerman/socket
 fi

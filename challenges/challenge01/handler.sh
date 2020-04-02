@@ -13,6 +13,5 @@ then
 fi
 if [[ "$command" == "completed" ]]
 then
-    echo "01.completed" > /srv/hackerman/state
-    echo "02.start" >> /srv/hackerman/socket
+    echo "02.install" >> /srv/hackerman/socket
 fi

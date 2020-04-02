@@ -9,6 +9,4 @@ chown hackerman:root /srv/hackerman/state
 chmod 774 /srv/hackerman/state
 cp socketreader /srv/hackerman/socketreader
 cp socketreader.service /etc/systemd/system/.
-systemctl enable socketreader
-systemctl start socketreader
 cd $directoryFrom

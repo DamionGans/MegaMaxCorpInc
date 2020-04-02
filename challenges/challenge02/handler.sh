@@ -19,13 +19,11 @@ fi
 
 if [[ "$command" == "startServerSucces" ]]
 then
-    systemctl start vsftpd
     echo "02.startServerSucces" > /srv/hackerman/state
 fi
 
 if [[ "$command" == "startServerFail" ]]
 then
-    systemctl stop vsftpd
     echo "02.startServerFail" > /srv/hackerman/state
 fi
 
