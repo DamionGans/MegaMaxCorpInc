@@ -9,7 +9,7 @@ then
 fi
 if [[ "$command" == "installed" ]]
 then
-    echo "02. installed" > /srv/hackerman/state
+    echo "02.installed" > /srv/hackerman/state
 fi
 
 if [[ "$command" == "startServer" ]]

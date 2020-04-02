@@ -5,8 +5,8 @@ var hackermanWare = require('../hackermanWare');
 /* GET home page. */
 router.get('/', function (req, res) {
     let hackermanState = req.app.get('hackermanState');
-    if (hackermanState === "undefined") {
-        hackermanWare.writeToHackermanSocket(00, install);
+    if (hackermanState.toString() === "") {
+        hackermanWare.writeToHackermanSocket("00", "install");
         res.redirect('/login.html');
     }
     else {
