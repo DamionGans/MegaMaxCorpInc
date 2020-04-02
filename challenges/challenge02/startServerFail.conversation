@@ -1,10 +1,9 @@
 You failed to start the server
 But don't you worry, I will help
 What is an and gate?
-What is true in it's truest configurationfile sense?
 Find the solution here:
 https://en.wikipedia.org/wiki/AND_gate
-(it means both things need to be true)
+(it means both things need to be enabled)
 https://vitux.com/how-to-edit-config-files-in-ubuntu/
 use nano to change the text between #and and #gate#
 Okay good luck!
