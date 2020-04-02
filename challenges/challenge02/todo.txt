@@ -1,5 +1,5 @@
 1. Login with SSH
-2. Find a secret folder in /srv/
+2. Find a .secret folder in /srv/
 3. Change the config
 4. Run the server
 5. Do something on the server

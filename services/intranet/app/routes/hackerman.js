@@ -14,16 +14,18 @@ router.get('/', function (req, res, next) {
   res.redirect('/hackerman.html');
 });
 
-// for now hackaton style
 function checkChallengeCompletionString(challengeCompletionString) {
-  switch (challengeCompletionString) {
-    case `Hey a new server, let's hack this! ....... What!!!??? wVEJWhZDdnOUcI8D4oD50aI5HPXmY18WT6u8e4Z09qPYQqYcA4nX7Pf2SiRdVKVDBWYYj7KmwsFg1TmGdnTd7DOoRDlXAFkfLMxyXiKVx08Cw3lltNC9fs1M27mrBnINZKKfDMMfWUBQjyIhko2Xs0UIsyIshxXvkiLYjJPrkNUMkfmbftpNulo1f3Qb8npTBuSENSMG`:
+    if(challengeCompletionString.includes(`lb7WnDcsC8d7HcwGUXbirbKUYIRWkzheU9r8X0Tw`)){
       return '00';
-    case `I have never seen an entity such as badly secured as this server, I have to do something...`:
+    }
+
+    else if(challengeCompletionString.includes(`d30wzjjfQcraIsiycnBWsn3yMI2iamFkI6ViOvIV`)){
       return '01';
-    case `I believe this work isn't a mistake. Who is the administrator? Why isn't he fired yet? Who am I to leave this company so vulnerable? What are my ethics? Hmmmmmm................`:
+    }
+    else if(challengeCompletionString.includes(`6xrcUB9aEcKHsXJHEidRVv1loIjF2rhM5nIMJQjl`)){
       return '02';
-    default:
+    }
+    else {
       return null;
   }
 }
