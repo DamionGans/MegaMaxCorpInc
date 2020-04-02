@@ -7,7 +7,7 @@ cp todo.txt /home/challenge02/.todo.txt
 chown challenge02:hackerman /home/challenge02/.todo.txt
 chmod 770 /home/challenge02/.todo.txt
 adduser challenge02ftp --disabled-login --gecos ""
-echo challenge02ftp:password |  chpasswd
+echo challenge02ftp:challenge02ftp |  chpasswd
 mkdir /srv/.S€CRE]/
 cp config /srv/.S€CRE]/.
 chmod 770 /srv/.S€CRE]/config
