@@ -1,8 +1,6 @@
 # MegaMaxCorpInc
 A CTF-box made for new Linux users. 
 
-*Important: This software is in a prerelease state. This readme is a WIP and the image is not finished yet. If you use the image, be prepared for a lot of things not to be working yet or finished.
-
 ## Description of MegaMaxCorpInc
 MegaMaxCorpInc is a big company that has badly secured IT-facilities. Mr. Hackerman has hacked the main-server of MegaMaxCorpInc and he will confront the player, who is the IT-administrator, to fix various problems out of a pity for the company. He offers various challenges to do so.
 
@@ -33,7 +31,7 @@ Installation targets can be:
 ```sh
 git clone https://github.com/DamionGans/MegaMaxCorpInc.git
 cd MegaMaxCorpInc/
-sudo bash installVM.sh
+sudo bash install.sh
 # enter your password and wait for the installation
 ```
 ### 3. Reboot the installation
