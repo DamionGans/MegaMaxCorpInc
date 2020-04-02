@@ -12,15 +12,17 @@ function hackermanAppear() {
 }
 
 function noMoreHackermanEntries() {
-    document.getElementById('hackermanChatBubbleText').innerText = "I don't have anything else to say right now, but come back later!";
+    document.getElementById('hackermanConversation').innerText = "I don't have anything else to say right now, but come back later!";
+    document.getElementById('spaceOrClickText').style.visibility = "hidden";
 }
 
 function updateHackermanShell() {
     if (currentConversationLine + 1 <= maxConversationLine) {
         currentConversationLine++;;
-        document.getElementById('hackermanChatBubbleText').innerText = conversation.split('\n')[currentConversationLine];
+        document.getElementById('hackermanConversation').innerText = conversation.split('\n')[currentConversationLine];
         document.getElementById('hackermanShellText').innerText += `\n${conversation.split('\n')[currentConversationLine]}`;
         document.getElementById('hackermanShell').scrollTop = document.getElementById('hackermanShell').scrollHeight;
+        document.getElementById('spaceOrClickText').style.visibility = "vissible";
     }
     else {
         noMoreHackermanEntries();
@@ -32,7 +34,7 @@ function updateConversationText() {
         if (data.toString() !== conversation) {
             conversation = data;
             currentConversationLine = -1;
-            maxConversationLine = data.toString().split(/\r\n|\r|\n/).length - 2;
+            maxConversationLine = data.toString().split(/\r\n|\r|\n/).length - 1;
             updateHackermanShell();
         }
     });

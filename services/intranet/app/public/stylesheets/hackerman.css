@@ -29,7 +29,9 @@ main {
 #noobShell {
     float:right;
 }
-
+#noobShellInput{
+    min-width:100%;
+}
 .chatBubble{
     position: absolute;
     bottom: 2vh;
@@ -49,16 +51,17 @@ main {
     width: auto;
     height: 20vh;
     margin:0%;
-    border-radius: 160px;
-    border: 3px solid #CD05FF;
     float:left;
 }
-.chatBubbleText {
+#hackermanChatBubblecontainer {
     float:right;
+    text-align:right;   
     margin-right:10vh;
-    margin-top: 10vh;
+    margin-top:8vh;
+}
+#hackermanConversation {
     font-size: 2.0vh;
 }
-#noobShellInput{
-    min-width:100%;
+#spaceOrClickText {
+    font-size:1.5vh;
 }

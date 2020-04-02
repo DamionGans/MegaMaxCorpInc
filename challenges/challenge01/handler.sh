@@ -5,6 +5,7 @@ cd $(pwd)/$(dirname "$0")
 if [[ "$command" == "install" ]]
 then
     bash install.sh
+    echo "01.installed" >> /srv/hackerman/socket
 fi
 if [[ "$command" == "installed" ]]
 then

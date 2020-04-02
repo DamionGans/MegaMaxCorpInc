@@ -2,9 +2,11 @@
 command=$1
 cd $(pwd)/$(dirname "$0")
 
-if [["$command" == "install" ]]
+if [[ "$command" == "install" ]]
 then
     bash install.sh
+    echo "02.installed" >> /srv/hackerman/socket
+fi
 if [[ "$command" == "installed" ]]
 then
     echo "02. installed" > /srv/hackerman/state
@@ -12,7 +14,7 @@ fi
 
 if [[ "$command" == "startServer" ]]
 then
-    bash /srv/hackerman/challenge02/startServer-hackerman.sh
+    bash startServer-hackerman.sh
 fi
 
 if [[ "$command" == "startServerSucces" ]]
