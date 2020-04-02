@@ -13,7 +13,7 @@ do
     if [[ "$i" == "enabled" ]]
     then
         enabledCount+=1
-    elif [[ "$i" == "#*" ]]
+    elif [[ "$i" == "#"* ]]
     then
         commentCount+=1
     else
@@ -21,7 +21,7 @@ do
     fi
 done
 
-if [[ $enabledCount -le 2 && $wrongCount -eq 0 && $commentCount -le 2 ]]
+if [[ "$enabledCount" -le 2 && "$wrongCount" -eq 0 && "$commentCount" -le 2 ]]
 then
     systemctl start vsftpd
     echo "02.startServerSucces" >> /srv/hackerman/socket
