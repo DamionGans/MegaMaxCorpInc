@@ -2,7 +2,7 @@
 A CTF-box made for new Linux users. 
 
 ## Description of MegaMaxCorpInc
-MegaMaxCorpInc is a big company that has badly secured IT-facilities. Mr. Hackerman has hacked the main-server of MegaMaxCorpInc and he will confront the player, who is the IT-administrator, to fix various problems out of a pity for the company. He offers various challenges to do so.
+MegaMaxCorpInc is a big company that has badly secured IT-facilities. Mr. Hackerman has hacked the main-server of MegaMaxCorpInc and he will confront the player, who is the IT-administrator, to learn basic Linux skills. He does this out of a pity for the company. He offers the player various challenges to do so.
 
 ## Setup options
 - The releases of this repo tab contains pre-installed images. That means an easy open the configuration inside your hypervisor/machine and run setup experience. 
